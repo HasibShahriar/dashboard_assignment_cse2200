@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import myPhoto from "./myPhoto.jpg";
 
@@ -26,17 +27,15 @@ export default function Sidebar({ setSelectedContent }) {
 
       {/* Menu */}
       <div style={{ textAlign: "left" }}>
-        <div
-          style={{ padding: "10px", cursor: "pointer" }}
-          onClick={() => setSelectedContent("Profile Page Content")}
-        >
-          Profile
+        <div style={{ padding: "10px" }}>
+          <Link to="/profile" style={{ textDecoration: "none", color: "black" }}>
+            Profile
+          </Link>
         </div>
-        <div
-          style={{ padding: "10px", cursor: "pointer" }}
-          onClick={() => setSelectedContent("My Articles Content")}
-        >
-          My Articles
+        <div style={{ padding: "10px" }}>
+          <Link to="/articles" style={{ textDecoration: "none", color: "black" }}>
+            My Articles
+          </Link>
         </div>
       </div>
     </div>
